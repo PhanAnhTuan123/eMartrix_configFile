@@ -4,16 +4,16 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/product_db
-    username: root
-    password: 12345678
+    username: eMartix
+    password: 12345
   jpa:
     hibernate:
       ddl-auto: update
   rabbitmq:
     host: localhost
     port: 5672
-    username: guest
-    password: guest
+    username: eMartix
+    password: 12345
   boot:
     message: "Hello from Product Service!"
 
