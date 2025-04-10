@@ -1,0 +1,13 @@
+auth:
+  gateway:
+    secret: x-eMartix-key
+
+eureka:
+  instance:
+    client:
+      serverUrl:
+        defaultZone: http://localhost:8761/eureka/
+    hostname: localhost
+
+
+  
