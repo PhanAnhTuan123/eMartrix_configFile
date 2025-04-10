@@ -1,9 +1,6 @@
 eureka:
-  instance:
-    hostname: localhost
-
   client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: true   # Tự đăng ký với Eureka
+    fetchRegistry: true        # Lấy danh sách service khác
+    serviceUrl:
+      defaultZone: "http://eureka-server:8761/eureka/"
