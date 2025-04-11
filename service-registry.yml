@@ -6,6 +6,9 @@ server:
   port: 8761
 
 eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
   client:
     register-with-eureka: false
     fetch-registry: false
@@ -13,9 +16,7 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     enable-self-preservation: false
-  instance:
-    hostname: localhost
-    prefer-ip-address: true
+  
 
 management:
   endpoints:
