@@ -1,6 +1,24 @@
 eureka:
   client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
   instance:
+    lease-renewal-interval-in-seconds: 10  # Gửi heartbeat mỗi 3 giây
+    lease-expiration-duration-in-seconds: 10  # Thời gian chờ trước khi xóa instance nếu không nhận được heartbeat
+    health-check-url-path: /actuator/health  # Endpoint kiểm tra sức khỏe
     prefer-ip-address: true
+    
+spring:
+  cloud:
+    loadbalancer:
+      health-check:
+        interval: 3s  # Khoảng thời gian kiểm tra sức khỏe
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info  # Mở endpoint health check
+  endpoint:
+    health:
+      show-details: always
