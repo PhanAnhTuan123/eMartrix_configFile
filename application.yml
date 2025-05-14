@@ -1,5 +1,3 @@
-server:
-  port: 8386
 
 spring:
   cloud:
